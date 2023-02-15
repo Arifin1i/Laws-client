@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Corporate",
+		"img": "https://upload.wikimedia.org/wikipedia/commons/9/96/Justice-2060093_1920.jpg",
+		"details": "Business, Enterprise or Company Law, Corporate Law is the branch of law that pertains to companies, and their structuring. It governs the formation, managing and conduct of companies, and includes such matters as reorganisation and restructuring, shareholder rights, mergers and acquisitions.",
+		"charge": "20000/hr"
+	},
+	{
+		"name": "Sport",
+		"img": "https://upload.wikimedia.org/wikipedia/commons/9/96/Justice-2060093_1920.jpg",
+		"details": "Sports law would be best described as the application of the law to a sporting context. It has been known to incorporate acts and case law, from areas of law including but not limited to: Contract Law relating to a sportsperson's sponsors. Employment law relating to one's club or federation contracts.",
+		"charge":"15000/hr"
+	},
+	{
+		"name": "Media",
+		"img": "https://upload.wikimedia.org/wikipedia/commons/9/96/Justice-2060093_1920.jpg",
+		"details": "Law is a legal field that relates to the regulation of telecommunications, privacy, broadcasting, advertising, the entertainment industry, censorship and information technology among others. As media has developed from print and live performances to the radio, television, movies, mobile devices and the Internet the law has tried to equally keep pace. One of the biggest areas of concern related to media law is intellectual property.",
+		"charge": "5000/hr"
+	},
+	{
+		"name": "Government",
+		"img": "https://upload.wikimedia.org/wikipedia/commons/9/96/Justice-2060093_1920.jpg",
+		"details": "Few areas of legal practice offer the variety and intellectual challenge than the work of government lawyers. The government calls upon its lawyers to advise on any number of issues - complex, novel, politically sensitive and often in the public eye. To carry out this work, the government needs its own lawyers and legal trainees who understand its business to provide legal services to a wide client base - including a range of central government departments and other government bodies.",
+		"charge": "3000/hr"
+	},
+	{
+		"name": "Crime",
+		"img": "https://upload.wikimedia.org/wikipedia/commons/9/96/Justice-2060093_1920.jpg",
+		"details": "Crime, Law and Social Change is a monthly peer-reviewed academic journal covering criminology from a global perspective, with a particular focus on financial crime, corruption, terrorism and organizational crime. It was established in 1977 as Contemporary Crises, obtaining its current name in 1991.",
+		"charge": "12000/hr"
+	},
+	{
+		"name": "Education",
+		"img": "https://upload.wikimedia.org/wikipedia/commons/9/96/Justice-2060093_1920.jpg",
+		"details": "It is an important right that every child has access to a suitable education but unfortunately, they don’t always receive the support that they need. This section informs parents and carers on the legal position across a range of education law topics so that they are better equipped to deal with challenges they may face.",
+		"charge": "8000/hr"
+	}
+]
