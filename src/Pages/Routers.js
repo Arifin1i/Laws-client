@@ -8,6 +8,7 @@ import Home from "./Home";
 // import Service from "./Service";
 import ServDetails from "./ServDetails";
 import LogIn from "./LogIn";
+import SignUp from "./SignUp";
 
 
 
@@ -41,6 +42,10 @@ const router = createBrowserRouter([{
             path:'/login',
             element:<LogIn></LogIn>
         
+        },
+        {
+            path: '/signup',
+            element: <SignUp></SignUp>
         }
     ]
 }

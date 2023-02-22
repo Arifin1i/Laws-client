@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthProvider';
 
 const LogIn = () => {
-    const [success, setSuccess] = useState (false)
-
+    const [success, setSuccess] = useState(false)
     // Authprovider er link chara
     // const auth = getAuth(app)
-    // const {login} =useContext (AuthContext)
+    const { login } = useContext(AuthContext)
     const handleLogin = e => {
         e.preventDefault();
         setSuccess(false);
@@ -18,18 +18,16 @@ const LogIn = () => {
 
         // Authprovider er link chara
         // signInWithEmailAndPassword(auth, email, password)
-        // login(email, password)
-        //     .then(result => {
-        //         const user = result.user;
-        //         console.log(user)
-        //         setSuccess(true);
-        //         form.reset();
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //     })
-
-
+        login(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                setSuccess(true);
+                form.reset();
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
     return (
         <div className="hero ">
@@ -37,11 +35,12 @@ const LogIn = () => {
                 <div className="text-center lg:text-left">
                     <p className="py-6 text-3xl ">Logging mechanisms and the ability to track user activities are critical in preventing, detecting, or minimizing the impact of a data compromise. The presence of logs in all environments allows thorough tracking, alerting, and analysis when something does go wrong.</p>
                     <p className="py-6 text-5xl ">You must log in to to private activity</p>
-
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <h1 className="text-5xl font-bold">Login now!</h1>
-                    <form onSubmit={handleLogin} className="card-body">
+                    <form
+                        onSubmit={handleLogin}
+                        className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -69,5 +68,5 @@ const LogIn = () => {
             </div>
         </div>
     );
-};
+}
 export default LogIn;
