@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 
 const LogIn = () => {
@@ -7,15 +7,17 @@ const LogIn = () => {
     // Authprovider er link chara
     // const auth = getAuth(app)
     const { login } = useContext(AuthContext)
+    const navigate = useNavigate();
     const handleLogin = e => {
         e.preventDefault();
         setSuccess(false);
+        // const navigate = useNavigate();
 
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password)
-
+        
         // Authprovider er link chara
         // signInWithEmailAndPassword(auth, email, password)
         login(email, password)
@@ -24,6 +26,8 @@ const LogIn = () => {
                 console.log(user)
                 setSuccess(true);
                 form.reset();
+                navigate('/home')
+
             })
             .catch(error => {
                 console.log(error)
@@ -53,7 +57,7 @@ const LogIn = () => {
                             </label>
                             <input type="text" name='password' placeholder="password" className="input input-bordered" required />
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                {/* <a href="#" className="label-text-alt link link-hover">Forgot password?</a> */}
                             </label>
                         </div>
                         <div className="form-control mt-6">

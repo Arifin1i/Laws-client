@@ -52,6 +52,7 @@ const SignUp = () => {
                                 </div>
                             </form>
                             <h2 className='text-center mb-5'> Member already <Link to='/login' className='text-orange-700'>Login</Link> </h2>
+            
                         </div>
                     </div>
                 </div>
