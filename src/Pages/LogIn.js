@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
+import GoogleSignIn from './GoogleSignIn';
 
 const LogIn = () => {
     const [success, setSuccess] = useState(false)
@@ -17,7 +18,7 @@ const LogIn = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password)
-        
+
         // Authprovider er link chara
         // signInWithEmailAndPassword(auth, email, password)
         login(email, password)
@@ -63,13 +64,18 @@ const LogIn = () => {
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login" />
                         </div>
+
                     </form>
                     {
                         success && <p>Welcome to CUuuuuuuuum</p>
                     }
                     <h2 className='text-center mb-5'> New to Genius car <Link to='/signup' className='text-orange-700'>Signup</Link> </h2>
+                    <hr></hr>
+                    <GoogleSignIn></GoogleSignIn>
                 </div>
+
             </div>
+
         </div>
     );
 }
