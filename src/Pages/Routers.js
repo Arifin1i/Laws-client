@@ -9,6 +9,7 @@ import Home from "./Home";
 import ServDetails from "./ServDetails";
 import LogIn from "./LogIn";
 import SignUp from "./SignUp";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -36,7 +37,7 @@ const router = createBrowserRouter([{
         },
         {
             path: '/blog',
-            element: <Blog></Blog>
+            element: <PrivateRoute><Blog></Blog></PrivateRoute>
         },
         {    
             path:'/login',

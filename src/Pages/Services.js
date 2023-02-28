@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Reviews from './Reviews';
+// import Reviews from './Reviews';
 import ServicesCart from './ServiceCard';
 
 const Services = () => {
