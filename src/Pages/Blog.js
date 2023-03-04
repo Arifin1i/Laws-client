@@ -44,10 +44,19 @@ const Blog = () => {
                 </h2>
             </div>
             <div>
-                <h2></h2>
-                <h2></h2>
+                <h2>How does NodeJS handle multiple requests at the same time?</h2>
+                <h2>
+                    Node.js is designed to handle multiple requests at the same time using an event-driven, non-blocking I/O model. This means that Node.js does not create a new thread for each request, as traditional server-side languages like PHP or Java do. Instead, it uses a single thread and an event loop to handle all incoming requests asynchronously.
+
+                    When a new request comes in, Node.js places it into an event queue, along with a callback function that will be executed when the request is completed. The event loop continuously checks the queue for any completed requests and executes their corresponding callback functions.
+
+                    Meanwhile, Node.js can continue to process other requests that are waiting in the queue. If a request requires an I/O operation, such as reading data from a file or making a network request, Node.js will delegate that task to a separate thread from a thread pool, freeing up the main event loop to process other requests.
+
+                    By using this non-blocking I/O model, Node.js can handle a large number of requests with a single thread, making it highly scalable and efficient. This also means that Node.js is well-suited for real-time, data-intensive applications that require high concurrency and low latency, such as chat applications or streaming services.
+
+                </h2>
             </div>
-            
+
         </div>
     );
 };
