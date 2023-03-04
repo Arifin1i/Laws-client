@@ -43,6 +43,10 @@ const Blog = () => {
                     Another difference is that JavaScript is primarily used for front-end web development, while Node.js is used for back-end web development. Node.js is also commonly used for building APIs, command-line tools, and real-time applications.
                 </h2>
             </div>
+            <div>
+                <h2></h2>
+                <h2></h2>
+            </div>
             
         </div>
     );
