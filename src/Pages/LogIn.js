@@ -1,9 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 import GoogleSignIn from './GoogleSignIn';
 
 const LogIn = () => {
+    useTitle('login')
+
     const [success, setSuccess] = useState(false)
     // Authprovider er link chara
     // const auth = getAuth(app)
@@ -13,7 +16,7 @@ const LogIn = () => {
         e.preventDefault();
         setSuccess(false);
         // const navigate = useNavigate();
-
+       
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
